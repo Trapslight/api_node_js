@@ -1,5 +1,5 @@
 const supertest = require('supertest');
-var app = require('../index');
+var app = require('../app');
 var mongoose = require('mongoose');
 
 beforeAll(() => {
