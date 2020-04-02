@@ -12,7 +12,7 @@ afterAll(() => {
 })
 
 describe("Testing API Node JS", () => {
-
+/*
     it("Test users route : findAll", async () => {
         const response = await supertest(app).get('/v1/users');
         expect(response.status).toBe(200);
@@ -45,4 +45,5 @@ describe("Testing API Node JS", () => {
         expect(response.body);
         expect(response.status).toBe(200);
     })
+    */
 });
