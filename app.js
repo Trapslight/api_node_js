@@ -12,8 +12,8 @@ var router_product = require('./router/router_product.js');
 var router_order = require('./router/router_order');
 
 
-    mongoose.Promise = Promise;
-    mongoose.connect('mongodb://localhost:27017/madb', {useNewUrlParser: true, useUnifiedTopology: true});
+    //mongoose.Promise = Promise;
+    //mongoose.connect('mongodb://localhost:27017/madb', {useNewUrlParser: true, useUnifiedTopology: true});
 
 
 var db = mongoose.connection;
