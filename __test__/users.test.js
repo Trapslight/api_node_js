@@ -14,9 +14,9 @@ afterAll(() => {
 describe("Testing API Node JS", () => {
 
     it("tests our testing framework if it works", () => {
-        expect(2).toBe(4);
+        expect(2).toBe(2);
     });
-    
+
 /*
     it("Test users route : findAll", async () => {
         const response = await supertest(app).get('/v1/users');
