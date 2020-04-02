@@ -14,9 +14,6 @@ var router_order = require('./router/router_order');
 /*
 mongoose.Promise = Promise;
 mongoose.connect('mongodb://localhost:27017/madb', {useNewUrlParser: true, useUnifiedTopology: true});
-server.listen(port, function(){
-    console.log("Server is running");
-})
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, "error:"));
@@ -50,8 +47,14 @@ app.io = io;
 var port = 8080;
 var hostname= 'localhost';
 
+/*
+server.listen(port, function(){
+    console.log("Server is running");
+})
+
 app.listen(port, hostname, function(){
     console.log("Server run "+ hostname +" port : "+ port);
 });
+*/
 
 module.exports = app;
