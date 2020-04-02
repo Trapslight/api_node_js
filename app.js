@@ -44,7 +44,7 @@ app.get('/',function(req,res){
 
 app.io = io;
 
-var port = 8080;
+var port = 8000;
 var hostname= 'localhost';
 
 server.listen(port, function(){
