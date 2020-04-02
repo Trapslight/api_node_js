@@ -17,13 +17,13 @@ mongoose.connect('mongodb://localhost:27017/madb', {useNewUrlParser: true, useUn
 server.listen(port, function(){
     console.log("Server is running");
 })
-*/
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, "error:"));
 db.once('open', () => {
     console.log('connected to mondodb');
 })
+*/
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -47,7 +47,7 @@ app.get('/',function(req,res){
 
 app.io = io;
 
-var port = 2222;
+var port = 8080;
 var hostname= 'localhost';
 
 app.listen(port, hostname, function(){
