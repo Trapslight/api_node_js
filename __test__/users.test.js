@@ -2,6 +2,7 @@ const supertest = require('supertest');
 var app = require('../app');
 var mongoose = require('mongoose');
 
+/*
 beforeAll(() => {
     mongoose.Promise = Promise;
     mongoose.connect('mongodb://localhost:27017/madb', {useNewUrlParser: true, useUnifiedTopology: true});
@@ -10,6 +11,7 @@ beforeAll(() => {
 afterAll(() => {
     mongoose.disconnect();
 })
+*/
 
 describe("Testing API Node JS", () => {
 
