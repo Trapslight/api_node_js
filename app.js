@@ -11,10 +11,13 @@ var router_user = require('./router/router_user.js');
 var router_product = require('./router/router_product.js');
 var router_order = require('./router/router_order');
 
-
-    //mongoose.Promise = Promise;
-    //mongoose.connect('mongodb://localhost:27017/madb', {useNewUrlParser: true, useUnifiedTopology: true});
-
+/*
+mongoose.Promise = Promise;
+mongoose.connect('mongodb://localhost:27017/madb', {useNewUrlParser: true, useUnifiedTopology: true});
+server.listen(port, function(){
+    console.log("Server is running");
+})
+*/
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, "error:"));
@@ -46,10 +49,6 @@ app.io = io;
 
 var port = 2222;
 var hostname= 'localhost';
-
-server.listen(port, function(){
-    console.log("Server is running");
-})
 
 app.listen(port, hostname, function(){
     console.log("Server run "+ hostname +" port : "+ port);
