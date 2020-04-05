@@ -25,15 +25,15 @@ describe("Testing API Node JS", () => {
         expect(2).toBe(2);
     });
 
-    /*
+    
     it("Test Users routes : create ", async() => {
         const response = await supertest(app)
         .post('/v1/users')
         .send({ id: 4, name: "Toti", lastname: "Nation", email: "toti.nation@test.fr", password: "12345"});
         expect(response.status).toBe(201);
     });
-    */
-   
+    
+
     it("Test users route : findAll", async () => {
         const response = await supertest(app).get('/v1/users');
         expect(response.status).toBe(200);

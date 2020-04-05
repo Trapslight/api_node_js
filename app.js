@@ -64,10 +64,10 @@ var hostname= 'localhost';
 server.listen(port, function(){
     console.log("Server is running");
 })
-
+/*
 app.listen(port, hostname, function(){
     console.log("Server run "+ hostname +" port : "+ port);
 });
-
+*/
 
 module.exports = app;
