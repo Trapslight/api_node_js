@@ -9,7 +9,6 @@ cache:
 script:
 - npm test
 deploy:
-  provider: azure_web_apps
-  slot: myapp-staging
-  verbose: true
-  on: prod
+  provider: heroku
+  api_key:
+  secure:

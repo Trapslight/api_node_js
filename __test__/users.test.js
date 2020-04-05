@@ -1,17 +1,23 @@
 const supertest = require('supertest');
 var app = require('../app');
+const URI = "mongodb+srv://dbUser:charles01160@cluster0-16lsq.gcp.mongodb.net/test?retryWrites=true&w=majority";
 var mongoose = require('mongoose');
 
-/*
+
 beforeAll(() => {
-    mongoose.Promise = Promise;
-    mongoose.connect('mongodb://localhost:27017/madb', {useNewUrlParser: true, useUnifiedTopology: true});
+    const connectDB = async() => {
+    await mongoose.connect(URI, {
+        useUnifiedTopology: true,
+        useNewUrlParser: true
+    });
+    console.log('db connected..!');
+};
 });
 
 afterAll(() => {
     mongoose.disconnect();
 })
-*/
+
 
 describe("Testing API Node JS", () => {
 
@@ -19,7 +25,13 @@ describe("Testing API Node JS", () => {
         expect(2).toBe(2);
     });
 
-/*
+    it("Test Users routes : create ", async() => {
+        const response = await supertest(app)
+        .post('/v1/users')
+        .send({ id: 4, name: "Nyatsu", lastname: "Homiu", email: "nya.homiu@test.fr", password: "12345"});
+        expect(response.status).toBe(201);
+    });
+
     it("Test users route : findAll", async () => {
         const response = await supertest(app).get('/v1/users');
         expect(response.status).toBe(200);
@@ -32,17 +44,10 @@ describe("Testing API Node JS", () => {
     });
     
 
-    it("Test Users routes : create ", async() => {
-        const response = await supertest(app)
-        .post('/v1/users')
-        .send({ id: 4, name: "Nyatsu", lastname: "Homiu", email: "nya.homiu@test.fr", password: "12345"});
-        expect(response.status).toBe(201);
-    });
-
     it("test Users routes: update", async() => {
         const response = await supertest(app)
-        .put('/v1/users/3')
-        .send({ id: 3, name: "Test-1", lastname: "Homiu-test", email: "nya.homiu@test.test.fr", password: "123456"});
+        .put('/v1/users/1')
+        .send({ id: 1, name: "Test-1", lastname: "Homiu-test", email: "nya.homiu@test.test.fr", password: "123456"});
         expect(response.status).toBe(200);
     })
 
@@ -52,5 +57,5 @@ describe("Testing API Node JS", () => {
         expect(response.body);
         expect(response.status).toBe(200);
     })
-    */
+    
 });
