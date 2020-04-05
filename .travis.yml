@@ -9,7 +9,6 @@ script:
 - npm test
 deploy:
   provider: heroku
-  api_key: 
-    secure: 2c953bd6-36d4-4f92-ac71-ef9ea7f36c5c
+  api_key: 2c953bd6-36d4-4f92-ac71-ef9ea7f36c5c
   app: api-nodejs-test
   on: trapslight/api-nodejs-test
